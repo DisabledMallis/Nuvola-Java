@@ -1,0 +1,15 @@
+build/
+*.vcxproj
+*.filters
+CMakeFiles/
+*.sln
+CMakeCache.txt
+*.cmake
+*.dll
+*.exp
+*.lib
+*.pdb
+*.obj
+*.tlog
+*.recipe
+*.ilk

@@ -1,0 +1,3 @@
+[submodule "map2cpp"]
+	path = map2cpp
+	url = https://github.com/DisabledMallis/map2cpp.git
