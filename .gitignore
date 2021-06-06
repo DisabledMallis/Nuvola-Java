@@ -13,3 +13,4 @@ CMakeCache.txt
 *.tlog
 *.recipe
 *.ilk
+Gen/
