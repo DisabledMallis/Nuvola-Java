@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <shlobj_core.h>
+#include "gen/net/minecraft/client/MinecraftClient.h"
 
 #define EXPORT comment(linker, "/EXPORT:" __FUNCTION__ "=" __FUNCDNAME__)
 
@@ -12,7 +13,7 @@ auto initialize() -> int {
     freopen_s(&fDummy, "CONIN$", "r", stdin);
     freopen_s(&fDummy, "CONOUT$", "w", stderr);
     freopen_s(&fDummy, "CONOUT$", "w", stdout);
-    std::cout << "Loading original WinINet.dll..." << std::endl;
+    std::cout << "We are in!" << std::endl;
 
     return 0;
 }
