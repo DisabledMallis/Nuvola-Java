@@ -2,7 +2,11 @@
 #include <string>
 #include <iostream>
 #include <shlobj_core.h>
+
+#include "Client.h"
+
 #include "gen/net/minecraft/client/MinecraftClient.h"
+#include "gen/net/minecraft/entity/player/PlayerEntity.h"
 
 #define EXPORT comment(linker, "/EXPORT:" __FUNCTION__ "=" __FUNCDNAME__)
 
@@ -14,6 +18,8 @@ auto initialize() -> int {
     freopen_s(&fDummy, "CONOUT$", "w", stderr);
     freopen_s(&fDummy, "CONOUT$", "w", stdout);
     std::cout << "We are in!" << std::endl;
+
+	Client* client = Client::getClient();
 
     return 0;
 }
