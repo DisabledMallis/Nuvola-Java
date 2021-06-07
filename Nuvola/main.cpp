@@ -1,7 +1,6 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
-#include <shlobj_core.h>
 
 #include "Client.h"
 

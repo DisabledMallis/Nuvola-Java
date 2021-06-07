@@ -10,6 +10,20 @@ execute_process(
 )
 file(REMOVE map2cpp/gen.bat)
 
+if(MSVC)
+    add_compile_options(
+            $<$<CONFIG:>:/MT> #---------|
+            $<$<CONFIG:Debug>:/MTd> #---|-- Statically link the runtime libraries (Stolen from Jirachi ;D)
+            $<$<CONFIG:Release>:/MT> #--|
+    )
+endif()
+
+link_directories("${CMAKE_CURRENT_LIST_DIR}/PolyHook_2_0/_install/lib/")
+
 add_library(Nuvola SHARED)
 
 add_subdirectory(Nuvola)
+
+target_include_directories(Nuvola PRIVATE "${CMAKE_CURRENT_LIST_DIR}/PolyHook_2_0/_install/include")
+
+target_link_libraries(Nuvola PRIVATE PolyHook_2 capstone)
