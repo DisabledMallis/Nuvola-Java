@@ -16,3 +16,7 @@ auto Hook::Apply() -> bool
 {
     return false;
 }
+auto Hook::Remove() -> bool
+{
+    return false;
+}

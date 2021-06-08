@@ -19,6 +19,7 @@ public:
 	auto GetName() -> std::string;
 	auto GetDis() -> PLH::CapstoneDisassembler&;
 	virtual auto Apply() -> bool;
+	virtual auto Remove() -> bool;
 };
 
 #endif /* NUVOLA_HOOKS_HOOK */

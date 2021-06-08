@@ -26,4 +26,4 @@ add_subdirectory(Nuvola)
 
 target_include_directories(Nuvola PRIVATE "${CMAKE_CURRENT_LIST_DIR}/PolyHook_2_0/_install/include")
 
-target_link_libraries(Nuvola PRIVATE PolyHook_2 capstone)
+target_link_libraries(Nuvola PRIVATE PolyHook_2 capstone opengl32)
