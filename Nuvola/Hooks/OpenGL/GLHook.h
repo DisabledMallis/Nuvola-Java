@@ -8,6 +8,7 @@ public:
 	GLHook() : Hook("glfwSwapBuffers")
 	{}
 	auto Apply() -> bool override;
+	auto Remove() -> bool override;
 };
 
 #endif /* NUVOLA_HOOKS_OPENGL_GLHOOK */
