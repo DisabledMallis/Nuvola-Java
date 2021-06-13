@@ -2,10 +2,12 @@
 #include <iostream>
 
 #include "OpenGL/GLHook.h"
+#include "Win32/WndHook.h"
 
 void HookManager::ApplyAll()
 {
     HookManager::ApplyHook(new GLHook());
+    HookManager::ApplyHook(new WndHook());
 }
 
 void HookManager::ApplyHook(Hook* toAdd)
